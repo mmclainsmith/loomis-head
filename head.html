@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Rotating Head</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="matrix.js"></script>
+
+		<style>
+			#wrapper{
+				width: 200px;
+				height: 200px;
+				margin: 0 auto;
+				position: relative;
+			}
+			.circle{
+				height: 200px;
+				width: 200px;
+				border: 1px black solid;
+				border-bottom: 1px blue solid;
+				border-radius: 100px;
+				margin:0;
+				padding:0;
+				position: absolute;
+				transform: none; 
+				background: linear-gradient(to right, red , yellow);
+				
+			}
+			table{
+				margin: 3em auto;
+			}
+			
+			td {
+				background-color: lightgrey;
+				text-align: center;
+				padding: 1em;
+				transition: background-color .5s, color .5s;
+			}
+			
+			td:hover{
+				background-color: grey;
+			}
+			
+			td:active{
+				color: red;
+			}
+			
+			#test{
+				border-radius: 50%;
+				width: 100px;
+				height: 100px;
+				border: black solid;
+			}
+			
+			#test:hover{
+				height: 50px;
+			}
+		</style>
+
+	</head>
+	<body>
+	<!--
+		fixedC: does not rotate, appears fixed to screen. Black
+		profileC: Runs across the nose. Red
+		headbandC: Runs across the ear line, like a headband. Green
+		browC: Runs across the brow line.  Blue
+		
+	-->
+		<div id="wrapper">
+			<div id="fixedC" class="circle"></div>
+		</div>
+		
+		<table>
+			<tr>
+				<td id="ccw"> &#8634; </td>
+				<td id="cw"> &#8635; </td>
+			</tr>
+			<tr>
+				<td id="left" > &#8592; </td>
+				<td id="right" > &#8594; </td>
+			</tr>
+			<tr>
+				<td id="up" > &#8593; </td>
+				<td id="down" > &#8595; </td>
+			</tr>
+		</table>
+		<div style="display: flex-box; content-align: vertical; height: 100px;">	
+		<div id="test"></div>
+		</div>
+	</body>
+</html>
